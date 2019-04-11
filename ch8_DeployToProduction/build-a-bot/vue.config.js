@@ -1,9 +1,9 @@
 module.exports = {
   configureWebpack: (config) => {
-    config.module.rules.push({
-      test: /\.coffee$/,
-      use: ['coffee-loader'],
-    });
+    // config.module.rules.push({
+    //   test: /\.coffee$/,
+    //   use: ['coffee-loader'],
+    // });
 
     const newRule = {
       test: /\.(png|jpe?g|gif)(\?.*)?$/,
@@ -27,7 +27,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8081',
+        target: 'http://localhost:49981',
         changeOrigin: true,
       },
     },
